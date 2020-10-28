@@ -30,7 +30,8 @@ public class Main {
             //se muestran todas las personas que viven en Bogotá
             System.out.println("\nNúmero de personas que viven Bogotá: " + cuantasPersonasVivenEn("Bogotá"));
             //se muestra el número de personas mayores de edad
-            System.out.println("\nNúmero de personas mayores de edad");
+            System.out.print("\nNúmero de personas mayores de edad: ");
+            System.out.println(personasMayoresDeEdad());
         }
     }
 
@@ -40,7 +41,7 @@ public class Main {
         String nombre, direccion, ciudad;
         Fecha fecha;
         Persona p;
-        int codigoPostal, N, i, dia, mes, año;
+        int codigoPostal, N, dia, mes, año;
 
         do {
             System.out.println("Número de personas? ");
@@ -48,45 +49,46 @@ public class Main {
         } while (N < 0);
         sc.nextLine();
 
-        for (i = 1; i <= N; i++) //inicializar la variable en 1 {
+        for (int i = 0; i < N; i++) {
             System.out.println("Persona " + i);
             System.out.print("Nombre: ");
             nombre = sc.nextLine();
-        do {
-            System.out.println("Fecha de Nacimiento: ");
-            System.out.println("Día: ");
-            dia = sc.nextInt();
-            System.out.println("Mes: ");
-            mes = sc.nextInt();
-            System.out.println("Año: ");
-            año = sc.nextInt();
-            fecha = new Fecha(dia, mes, año);
-        } while (!fecha.fechaCorrecta());
-        sc.nextLine();
-        System.out.println("Dirección");
-        direccion = sc.nextLine();
-        System.out.println("Código postal: ");
-        codigoPostal = sc.nextInt();
-        sc.nextLine();
-        System.out.println("Ciudad: ");
-        ciudad = sc.nextLine();
+            do {
+                System.out.println("Fecha de Nacimiento: ");
+                System.out.println("Día: ");
+                dia = sc.nextInt();
+                System.out.println("Mes: ");
+                mes = sc.nextInt();
+                System.out.println("Año: ");
+                año = sc.nextInt();
+                fecha = new Fecha(dia, mes, año);
+            } while (!fecha.fechaCorrecta());
+            sc.nextLine();
+            System.out.println("Dirección");
+            direccion = sc.nextLine();
+            System.out.println("Código postal: ");
+            codigoPostal = sc.nextInt();
+            sc.nextLine();
+            System.out.println("Ciudad: ");
+            ciudad = sc.nextLine();
 
-        //se crea nueva instancia de persona
-        p = new Persona();
-        p.setNombre(nombre);
-        p.setFechaNacimiento(fecha);
-        p.setDireccion(direccion);
-        p.setCodigoPostal(codigoPostal);
-        p.setCiudad(ciudad);
+            //se crea nueva instancia de persona
+            p = new Persona();
+            p.setNombre(nombre);
+            p.setFechaNacimiento(fecha);
+            p.setDireccion(direccion);
+            p.setCodigoPostal(codigoPostal);
+            p.setCiudad(ciudad);
 
-        //se añade al objeto Array
-        personas.add(p);
+            //se añade al objeto Array
+            personas.add(p);
+        }
     }
 
     //Mostrar todas las personas
     public static void mostrar() {
         for (int i = 0; i < personas.size(); i++) {
-           // System.out.println(personas.get(i));
+            System.out.println(personas.get(i));
         }
     }
 
