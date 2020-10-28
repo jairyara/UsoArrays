@@ -16,7 +16,7 @@ public class Fecha {
 
     //Métodos get y set
     public int getDia() {
-        return dia;
+        return this.dia;
     }
 
     public void setDia(int d) {
@@ -24,7 +24,7 @@ public class Fecha {
     }
 
     public int getMes() {
-        return mes;
+        return this.mes;
     }
 
     public void setMes(int m) {
@@ -32,7 +32,7 @@ public class Fecha {
     }
 
     public int getAño() {
-        return año;
+        return this.año;
     }
 
     public void setAño(int a) {
@@ -98,18 +98,18 @@ public class Fecha {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        if (dia < 10) {
+        if (this.dia < 10) {
             sb.append("0");
         }
-        sb.append(dia);
+        sb.append(this.dia);
         sb.append("-");
-        if (mes < 10) {
+        if (this.mes < 10) {
             sb.append("0");
         }
-        sb.append(mes);
+        sb.append(this.mes);
         sb.append("-");
 
-        sb.append(año);
+        sb.append(this.año);
         return sb.toString();
     }
 }

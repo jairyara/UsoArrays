@@ -50,9 +50,12 @@ public class Persona {
     }
 
     public void setFechaNacimiento(Fecha fecha) {
-        fechaNacimiento.setDia(fecha.getDia());
+        /* fechaNacimiento.setDia(fecha.getDia());
         fechaNacimiento.setDia(fecha.getMes());
-        fechaNacimiento.setDia(fecha.getAño()); //Ojo por la ñ
+        fechaNacimiento.setDia(fecha.getAño());
+        Error
+         */
+        this.fechaNacimiento = fecha;
     }
 
     //Método para mostrar los datos de las personas según el formato pedido
@@ -62,7 +65,7 @@ public class Persona {
         sb.append("Nombre: ");
         sb.append(nombre);
         sb.append("\nFecha de Nacimiento: ");
-        sb.append(fechaNacimiento);
+        sb.append(fechaNacimiento.toString());
         sb.append("\nDirección: ");
         sb.append(direccion);
         sb.append("\n");
@@ -82,9 +85,9 @@ public class Persona {
         int diaActual = hoy.get(Calendar.DAY_OF_MONTH);
         if (añoActual - fechaNacimiento.getAño() > 18) {
             return true;
-        } else if (añoActual - fechaNacimiento.getAño() == 18 && mesActual > fechaNacimiento.getMes()){
+        } else if (añoActual - fechaNacimiento.getAño() == 18 && mesActual > fechaNacimiento.getMes()) {
             return true;
-        } else if(añoActual - fechaNacimiento.getAño() == 18 &&
+        } else if (añoActual - fechaNacimiento.getAño() == 18 &&
                 mesActual == fechaNacimiento.getMes() &&
                 diaActual >= fechaNacimiento.getDia()) {
             return true;
