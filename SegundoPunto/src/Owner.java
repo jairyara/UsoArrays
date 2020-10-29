@@ -22,6 +22,7 @@ public class Owner {
         this.pet = pet;
     }
 
+    //setters y getters del propietario
     public String getName() {
         return name;
     }
@@ -88,15 +89,27 @@ public class Owner {
 
     @Override
     public String toString() {
-        return "Owner{" +
-                "name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", birth=" + birth +
-                ", phone=" + phone +
-                ", email='" + email + '\'' +
-                ", DNI=" + DNI +
-                ", pet=" + pet +
-                '}';
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("ID: ");
+        sb.append(pet);
+        sb.append("}\n Nombre del dueño: ");
+        sb.append(name);
+        sb.append("\n Dirección: ");
+        sb.append(address);
+        sb.append("\n Ciudad: ");
+        sb.append(city);
+        sb.append("\n Fecha de nacimiento: ");
+        sb.append(birth);
+        sb.append("\n Teléfono: ");
+        sb.append(phone);
+        sb.append("\n Correo electrónico ");
+        sb.append(email);
+        sb.append("\n Número de cédula: ");
+        sb.append(DNI);
+        sb.append("\n ID mascota: ");
+        sb.append(pet);
+        sb.append("\n");
+        return sb.toString();
     }
 }

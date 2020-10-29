@@ -96,16 +96,35 @@ public class Pet {
 
     @Override
     public String toString() {
-        return "Mascota{" + name +
-                "ID=" + ID +
-                ", Nombre:'" + name + '\'' +
-                ", Edad:" + age +
-                ", Género:'" + genre + '\'' +
-                ", Animal'" + animal + '\'' +
-                ", Tamaño:'" + size + '\'' +
-                ", Raza:'" + breed + '\'' +
-                ", Vacunado:" + vaccine +
-                ", Discapacitado:" + dissability +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("ID: ");
+        sb.append(ID);
+        sb.append("}\n Nombre de la mascota: ");
+        sb.append(name);
+        sb.append("\n Edad de la mascota: ");
+        sb.append(age);
+        sb.append("\n Género de la mascota: ");
+        sb.append(genre);
+        sb.append("\n Tipo de animal: ");
+        sb.append(animal);
+        sb.append("\n Tamaño de la mascota: ");
+        sb.append(size);
+        sb.append("\n Está vacunado?: ");
+        if (vaccine == true) {
+            sb.append("Si");
+        } else {
+            sb.append("No");
+
+        }
+        sb.append("\n La mascota tiene discapacidad?: ");
+        if (dissability == true) {
+            sb.append("Si");
+        } else {
+            sb.append("No");
+        }
+        sb.append("\n Raza: ");
+        sb.append(breed);
+        sb.append("\n");
+        return sb.toString();
     }
 }

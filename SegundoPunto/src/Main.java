@@ -1,3 +1,12 @@
+/* Parcial II Programación I
+Integrantes: Edinson Jair Yara Rueda
+             Miguel David Ruiz Sánchez
+Descripción del programa: De una manera casi identica, este algoritmo que simula la recepción de datos
+o ficha técnica de un animal en una veterinaria, asi mismo como los datos de contacto de su dueño
+
+
+*/
+
 import java.util.*;
 
 
@@ -55,25 +64,29 @@ public class Main {
             long DNI = sc.nextLong();
 
             sc.nextLine();
+            
+            int ID = 0;
+            ID = ID + 1;
+
             System.out.print("Nombre de la mascota: ");
             String petName = sc.nextLine();
-            System.out.print("Edad de la mascota: ");
+            System.out.print("Edad de la mascota: (En años) ");
             int petAge = sc.nextInt();
-            System.out.print("Sexo de la mascota: ");
+            System.out.print("Sexo de la mascota: (Hembra, Macho) ");
             sc.nextLine();
             String petSex = sc.nextLine();
-            System.out.print("Tipo de animal: ");
+            System.out.print("Tipo de animal: (Ejemplo: Perro, Gato) ");
             String petType = sc.nextLine();
-            System.out.print("Tamaño de la mascota: ");
+            System.out.print("Tamaño de la mascota: (Grande, Mediano, Pequeño) ");
             String petSize = sc.nextLine();
             System.out.print("Raza de la mascota: ");
             String petBreed = sc.nextLine();
-            System.out.print("Está vacunada la mascota: ");
+            System.out.print("Está vacunada la mascota: (true o false) ");
             Boolean petVaccines = sc.nextBoolean();
-            System.out.print("Está discapacitada la mascota: ");
+            System.out.print("Está discapacitada la mascota: (true o false) ");
             Boolean petDisability = sc.nextBoolean();
 
-            Pet pet = new Pet(i, petName, petAge, petSex, petType, petSize, petBreed, petVaccines, petDisability);
+            Pet pet = new Pet(ID, petName, petAge, petSex, petType, petSize, petBreed, petVaccines, petDisability);
 
             owners.add(new Owner(personName, address, city, date, phone, email, DNI, pet));
         }
