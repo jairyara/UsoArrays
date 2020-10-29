@@ -11,7 +11,6 @@ public class Owner {
     private long DNI;
     private Pet pet;
 
-
     public Owner(String name, String address, String city, Date birth, long phone, String email, long DNI, Pet pet) {
         this.name = name;
         this.address = address;
@@ -89,15 +88,15 @@ public class Owner {
 
     @Override
     public String toString() {
-        return "Dueño{" +
-                "Nombre:'" + name + '\'' +
-                ", Dirección:'" + address + '\'' +
-                ", Ciudad:'" + city + '\'' +
-                ", Fecha de nacimiento:" + birth +
-                ", Phone:" + phone +
-                ", Correo electrónico:'" + email + '\'' +
-                ", Número de identificación:" + DNI +
-                ", ID Mascota:" + pet +
+        return "Owner{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", birth=" + birth +
+                ", phone=" + phone +
+                ", email='" + email + '\'' +
+                ", DNI=" + DNI +
+                ", pet=" + pet +
                 '}';
     }
 }
